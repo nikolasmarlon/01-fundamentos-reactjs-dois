@@ -1,13 +1,17 @@
 //.JSX = JavaScript + XML (Arquivo JavaScript que comtém HTML)
 
-//importação do componente Post.jsx
+//importação do componente Header.jsx
 import { Header } from "./components/Header";
+//importação do componente Post.jsx
 import { Post } from "./Post";
 
+
+//importação de css global (global.css)
+import './global.css'
+
+
+
 //Componente é uma função que retorna HTML
-
-
-
 export function App() { 
 
   return (
