@@ -10,7 +10,7 @@ import { Post } from "./Post";
 export function App() { 
 
   return (
-    //Retornar multiplos elementos sempre precisa de um elemento pai
+    //Para retornar multiplos elementos,  sempre precisa de um elemento pai envolvendo os elementos
     <div>    
       <Post />
       <Post />
