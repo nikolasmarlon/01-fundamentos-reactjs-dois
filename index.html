@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React</title>
   </head>
   <body>
+
     <div id="root"></div>
+    
+    <!-- o type module na importação do script é importante, pois, o vite 
+      utiliza ECM nativos do browsers para importar e exportar, neste caso nao precisa
+    usar um bundle(como o webpack), nem compiler(como o babel)-->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
