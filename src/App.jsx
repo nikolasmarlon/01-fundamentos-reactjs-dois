@@ -1,6 +1,7 @@
 //.JSX = JavaScript + XML (Arquivo JavaScript que comtém HTML)
 
 //importação do componente Post.jsx
+import { Header } from "./components/Header";
 import { Post } from "./Post";
 
 //Componente é uma função que retorna HTML
@@ -14,6 +15,8 @@ export function App() {
 
     //autor e content são propriedade passadas para o componente Post
     <div> 
+      
+      <Header />
 
       {/*Primeiro Post (componente) passando propriedades(author, content) para o componente*/}  
       <Post author="Nikolas Marlon" content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio odit, rem natus perferendis voluptates modi accusamus suscipit nulla laborum unde obcaecati ut nihil aliquam sunt inventore porro nostrum, sequi quod."/>
