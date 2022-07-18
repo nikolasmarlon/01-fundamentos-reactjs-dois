@@ -11,12 +11,19 @@ export function App() {
 
   return (
     //Para retornar multiplos elementos,  sempre precisa de um elemento pai envolvendo os elementos
-    <div>    
+
+    //autor e content são propriedade passadas para o componente Post
+    <div> 
+
+      {/*Primeiro Post (componente) passando propriedades(author, content) para o componente*/}  
+      <Post author="Nikolas Marlon" content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio odit, rem natus perferendis voluptates modi accusamus suscipit nulla laborum unde obcaecati ut nihil aliquam sunt inventore porro nostrum, sequi quod."/>
       <Post />
+
+      {/*Segundo Post (componente) passando propriedades(author, content) para o componente*/} 
+      <Post author="Nikolas Marlon" content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio odit, rem natus perferendis voluptates modi accusamus suscipit nulla laborum unde obcaecati ut nihil aliquam sunt inventore porro nostrum, sequi quod."/>
       <Post />
-      <Post />
+      
     </div>
   )
 }
-
 

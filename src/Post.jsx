@@ -1,5 +1,13 @@
 
+//A função recebe um único argumento (props)
+//props é um objeto que recebe props{author: "", content: ""} que são as 
+// informações enviadas
 
-export function Post(){
-    return <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos molestiae necessitatibus repellendus dolores fuga id mollitia dolorem maxime enim est. Ab assumenda magni, dolor quis obcaecati pariatur ad cupiditate? Numquam.</p>
+export function Post(props){
+    return (
+        <div>
+            <h1>{props.author}</h1>
+            <p>{props.content}</p>
+        </div>
+    )
 }
