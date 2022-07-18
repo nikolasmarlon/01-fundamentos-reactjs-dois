@@ -1,13 +1,22 @@
+//.JSX = JavaScript + XML (Arquivo JavaScript que comtém HTML)
+
+//importação do componente Post.jsx
+import { Post } from "./Post";
+
+//Componente é uma função que retorna HTML
 
 
-function App() {
-  
+
+export function App() { 
 
   return (
-    <div className="App">
-      <h1>Hello world</h1>  
+    //Retornar multiplos elementos sempre precisa de um elemento pai
+    <div>    
+      <Post />
+      <Post />
+      <Post />
     </div>
   )
 }
 
-export default App
+
