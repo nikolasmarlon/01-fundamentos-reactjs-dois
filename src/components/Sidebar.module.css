@@ -18,6 +18,32 @@
     display: flex; /*Facilita o arranjo horizontal e vertical*/
     flex-direction: column; /*deixa todos os item do bloco um abaixo do outro*/
     align-items: center; /*alinha no eixo y os elementos ao centro*/
+
+    margin-top: calc(0px - 1.5rem - 6px); /*põe uma margem negativa no container perfil(fazendo a imagem do usuário ficar por cima da capa*/
+}
+
+/*novo do usuário*/
+.profile strong{
+    margin-top: 1rem; /*adiciona 1rem(16px) de margem ao topo*/
+    color: var(--gray-100); /*cor do texto*/
+    line-height: 1.6; /*Altura da linha do texto*/
+}
+
+/*cargo do usuário*/
+.profile span{
+    font-size: 0.875rem; /*tamanho da fonte de 14px*/
+    color: var(--green-400);
+    line-height: 1.6;
+}
+
+/*Estilos para imagem do usuário*/
+.avatar{
+    width: calc(3rem + 12px); /*largura mais a soma das bordas dos 4 lados*/
+    height: calc(3rem + 12px);/*altura mais a soma das bordas dos 4 lados*/
+    border-radius: 8px;/*cantos arredondado*/
+    border: 4px solid var(--gray-800); /*borda do avatar (imagem do usuário)*/
+    outline: 2px solid var(--green-500); /*contorno ao redor da borda*/
+
 }
 
 
@@ -42,4 +68,12 @@
     display: flex;
     align-items: center;/*alinha ao centro no eixo y */
     justify-content: center; /*alinha ao centro no eixo x*/
+
+    gap: 0.5rem;/*espaço entre o icone e o texto*/
+    transition: color 0.1s, background-color 0.1s; /*Transição na cor e no fundo do botão*/
+}
+
+.sidebar footer a:hover{
+    background: var(--green-500);
+    color: var(--white);
 }
