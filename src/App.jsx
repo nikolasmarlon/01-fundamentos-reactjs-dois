@@ -4,7 +4,8 @@
 import { Header } from "./components/Header";
 //importação do componente Post.jsx
 import { Post } from "./Post";
-
+//importação do compotente Sidebar.jsx
+import { Sidebar } from "./components/Sidebar";
 
 //importação css
 import styles from './App.module.css'
@@ -27,9 +28,10 @@ export function App() {
       <Header />
 
       <div className={styles.wrapper}>
-          <aside>
-              Sidebar (barra lateral)
-          </aside>
+          
+          {/**Componente Sidebar */}
+          <Sidebar />
+
 
           <main>
             {/*Primeiro Post (componente) passando propriedades(author, content) para o componente*/}  
