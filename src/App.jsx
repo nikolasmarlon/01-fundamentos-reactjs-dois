@@ -6,8 +6,12 @@ import { Header } from "./components/Header";
 import { Post } from "./Post";
 
 
+//importação css
+import styles from './App.module.css'
+
 //importação de css global (global.css)
 import './global.css'
+
 
 
 
@@ -22,14 +26,21 @@ export function App() {
       
       <Header />
 
-      {/*Primeiro Post (componente) passando propriedades(author, content) para o componente*/}  
-      <Post author="Nikolas Marlon" content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio odit, rem natus perferendis voluptates modi accusamus suscipit nulla laborum unde obcaecati ut nihil aliquam sunt inventore porro nostrum, sequi quod."/>
-      <Post />
+      <div className={styles.wrapper}>
+          <aside>
+              Sidebar (barra lateral)
+          </aside>
 
-      {/*Segundo Post (componente) passando propriedades(author, content) para o componente*/} 
-      <Post author="Nikolas Marlon" content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio odit, rem natus perferendis voluptates modi accusamus suscipit nulla laborum unde obcaecati ut nihil aliquam sunt inventore porro nostrum, sequi quod."/>
-      <Post />
-      
+          <main>
+            {/*Primeiro Post (componente) passando propriedades(author, content) para o componente*/}  
+            <Post author="Nikolas Marlon" content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio odit, rem natus perferendis voluptates modi accusamus suscipit nulla laborum unde obcaecati ut nihil aliquam sunt inventore porro nostrum, sequi quod."/>
+            <Post />
+
+            {/*Segundo Post (componente) passando propriedades(author, content) para o componente*/} 
+            <Post author="Nikolas Marlon" content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio odit, rem natus perferendis voluptates modi accusamus suscipit nulla laborum unde obcaecati ut nihil aliquam sunt inventore porro nostrum, sequi quod."/>
+            <Post />
+          </main>
+      </div>      
     </div>
   )
 }
