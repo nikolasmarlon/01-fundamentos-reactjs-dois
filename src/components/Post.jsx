@@ -30,6 +30,19 @@ export function Post(){
                     <a href="">#alunando</a>
                 </p>
             </div>
+
+            {/**Seção de comentários */}
+            <form className={styles.commentForm}>
+                <strong>Deixe seu feedback</strong>
+
+                <textarea placeholder='Deixe um comentário' />
+
+                <footer>
+                    <button type='submit'>Publicar</button>
+                </footer>
+            </form>
+            {/**Fim Seção de comentários */}
+
         </article>
     )
 }
