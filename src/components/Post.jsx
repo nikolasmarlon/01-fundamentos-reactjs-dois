@@ -1,3 +1,4 @@
+import { Comment } from './Comment'
 import styles from './Post.module.css'
 
 export function Post(){
@@ -31,7 +32,7 @@ export function Post(){
                 </p>
             </div>
 
-            {/**Seção de comentários */}
+            {/**Seção formuário de comentários */}
             <form className={styles.commentForm}>
                 <strong>Deixe seu feedback</strong>
 
@@ -41,7 +42,19 @@ export function Post(){
                     <button type='submit'>Publicar</button>
                 </footer>
             </form>
-            {/**Fim Seção de comentários */}
+            {/**Fim Seção formulário de comentários */}
+
+            {/**Lista de comentários */}
+            <div className={styles.commentList}>
+                <Comment />
+                <Comment />
+                <Comment />
+                <Comment />
+                <Comment />
+                <Comment />
+                <Comment />
+            </div>
+            {/**Fim Lista de comentários */}
 
         </article>
     )
