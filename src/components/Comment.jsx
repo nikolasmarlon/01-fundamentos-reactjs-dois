@@ -19,7 +19,7 @@ export function Comment(){
 
                         <button title='Deletar comentário'>
                             {/**Biblioteca phosphor-react */}
-                            <Trash size={20} />
+                            <Trash className={styles.trash}/>
                         </button>                        
                     </header>
 
