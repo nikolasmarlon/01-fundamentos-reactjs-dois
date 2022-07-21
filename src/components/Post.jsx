@@ -16,7 +16,7 @@ export function Post(){
                     </div>
                 </div>
 
-                <time title="19 de Julho às 22:40" deteTime="2022-07-19 22:32:05">Publicado há 1h</time>
+                <time title="19 de Julho às 22:40" dateTime="2022-07-19 22:32:05">Publicado há 1h</time>
             </header>
 
             <div className={styles.content}>
@@ -48,12 +48,7 @@ export function Post(){
             {/**Lista de comentários */}
             <div className={styles.commentList}>
                 <Comment />
-                <Comment />
-                <Comment />
-                <Comment />
-                <Comment />
-                <Comment />
-                <Comment />
+               
             </div>
             {/**Fim Lista de comentários */}
 

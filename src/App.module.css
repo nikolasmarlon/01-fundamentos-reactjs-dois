@@ -11,3 +11,12 @@
     gap: 2rem; /*espaçamento entre as colunas de 32px */
     align-items: flex-start; /*alinha a sidebar e o main ao topo*/
 }
+
+@media (max-width: 768px) {
+    html{
+        font-size: 87.5%;
+    }
+    .wrapper{
+        grid-template-columns: 1fr;
+    }
+}

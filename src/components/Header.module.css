@@ -1,6 +1,7 @@
 
 /*estilos para o cabeçalho*/
 .header{
+    
     background: var(--gray-800); /*fundo do cabeçalho */
     display: flex; /*Facilita o arranjo horizontal e vertical*/
     justify-content: center; /*Alinha no eixo x os elementos ao centro*/
