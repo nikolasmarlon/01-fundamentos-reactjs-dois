@@ -4,6 +4,7 @@ import { PencilLine } from 'phosphor-react'
 import styles from './Sidebar.module.css'
 
 import capa from '../assets/capa.jpg'
+import { Avatar } from './Avatar'
 
 export function Sidebar(){
     return(
@@ -12,7 +13,7 @@ export function Sidebar(){
             <img className={styles.profileCover} src={capa} />
 
             <div className={styles.profile}>
-                <img className={styles.avatar} src="https:github.com/nikolasmarlon.png"/>
+                <Avatar src="https:github.com/nikolasmarlon.png"/>
 
                 <strong>Nikolas Marlon</strong>
                 <span>Web Developer</span>

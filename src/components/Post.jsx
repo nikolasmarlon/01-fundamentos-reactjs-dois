@@ -1,3 +1,4 @@
+import { Avatar } from './Avatar'
 import { Comment } from './Comment'
 import styles from './Post.module.css'
 
@@ -7,7 +8,7 @@ export function Post(){
             {/** Cabeçalho onde vai ficar o Avatar, cargo e a data de publicação */}
             <header>
                 <div className={styles.author}>
-                    <img className={styles.avatar} src="https://github.com/nikolasmarlon.png" />
+                    <Avatar src="https://github.com/nikolasmarlon.png" />
 
                     <div className={styles.authorInfo}>
                         <strong>Nikolas Marlon</strong>
