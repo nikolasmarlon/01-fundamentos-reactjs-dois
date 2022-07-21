@@ -29,8 +29,7 @@ export function App() {
           <Sidebar />
           <main>
             {/*Primeiro Post (componente) passando propriedades(author, content) para o componente*/}  
-            <Post author="Nikolas Marlon" content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio odit, rem natus perferendis voluptates modi accusamus suscipit nulla laborum unde obcaecati ut nihil aliquam sunt inventore porro nostrum, sequi quod."/>
-            
+            <Post author="Nikolas Marlon" content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio odit, rem natus perferendis voluptates modi accusamus suscipit nulla laborum unde obcaecati ut nihil aliquam sunt inventore porro nostrum, sequi quod."/>            
 
             {/*Segundo Post (componente) passando propriedades(author, content) para o componente*/} 
             <Post author="Nikolas Marlon" content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio odit, rem natus perferendis voluptates modi accusamus suscipit nulla laborum unde obcaecati ut nihil aliquam sunt inventore porro nostrum, sequi quod."/>
