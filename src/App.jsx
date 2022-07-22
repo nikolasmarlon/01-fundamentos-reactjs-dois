@@ -13,7 +13,36 @@ import styles from './App.module.css'
 //importação de css global (global.css)
 import './global.css'
 
-
+const posts = [
+  {
+    id: 1,
+    author: {
+      avatarUrl: 'https://github.com/nikolasmarlon.png',
+      name:  'Nikolas Marlon',
+      role: 'Web Developer'
+    },
+    content: [
+      {type:  'paragraph', content: 'e aí'},
+      {type:  'paragraph', content: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio laborum eum, provident deleniti officiis assumenda harum neque optio distinctio nam debitis. Provident temporibus mollitia dignissimos corporis facilis nobis, beatae porro.'},
+      {type:  'link', content: 'fazumsiteai.com.br'}
+    ],
+    publishedAt: new Date('2022-07-19 21:00:03')
+  },
+  {
+    id: 2,
+    author: {
+      avatarUrl: 'https://github.com/robertosousa.png',
+      name:  'Roberto Sousa',
+      role: 'Armador Aquático'
+    },
+    content: [
+      {type:  'paragraph', content: 'Lorem ipsum, dolor sit amet consectetur'},
+      {type:  'paragraph', content: 'adipisicing elit. Odio laborum eum, provident deleniti officiis assumenda harum neque optio distinctio nam debitis. Provident temporibus mollitia dignissimos corporis facilis nobis, beatae porro.'},
+      {type:  'link', content: 'fazumsiteai.com.br'}
+    ],
+    publishedAt: new Date('2022-07-12 21:00:03')
+  },
+]
 
 
 //Componente é uma função que retorna HTML
@@ -28,12 +57,16 @@ export function App() {
           {/**Componente Sidebar */}
           <Sidebar />
           <main>
-            {/*Primeiro Post (componente) passando propriedades(author, content) para o componente*/}  
-            <Post author="Nikolas Marlon" content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio odit, rem natus perferendis voluptates modi accusamus suscipit nulla laborum unde obcaecati ut nihil aliquam sunt inventore porro nostrum, sequi quod."/>            
+            {/*iteração com posts*/}  
 
-            {/*Segundo Post (componente) passando propriedades(author, content) para o componente*/} 
-            <Post author="Nikolas Marlon" content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio odit, rem natus perferendis voluptates modi accusamus suscipit nulla laborum unde obcaecati ut nihil aliquam sunt inventore porro nostrum, sequi quod."/>
-           
+            {posts.map(post => {
+              return (
+                <Post author={post.author} content={post.content} publishedAt={post.publishedAt} />
+              
+              )
+            })}
+
+
           </main>
       </div>      
     </div>
