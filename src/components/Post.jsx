@@ -27,6 +27,7 @@ export function Post({author, content, publishedAt}){
         //foi criado um novo estado para receber o texto da textarea (newCommentText)
         //const newCommentText = event.target.comment.value
 
+        //forma correta para adicionar mais itens num array de estados
         setComments([...comments, newCommentText])
 
         setNewCommentText('') // voltar o estado que armazena a textarea para o valor original
