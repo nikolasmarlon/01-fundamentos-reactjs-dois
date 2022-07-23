@@ -115,6 +115,17 @@
     transition: background-color 0.1s;
 }
 
+.commentForm button:disabled{
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+/*Se o botão nao estiver desabilitado, aplica-se o hover*/
+.commentForm button:not(:disabled):hover{
+    background: var(--green-300);
+}
+
+
 /*Se o textarea nao estivar com foco, o footer que contém o botão nao vai aparecer*/
 .commentForm footer{
     visibility: hidden;
@@ -125,9 +136,6 @@
 .commentForm:focus-within footer{
     visibility: visible;
     max-height: none;
-}
-.commentForm button:hover{
-    background: var(--green-300);
 }
 
 /*O focus foi editado no global.css*/

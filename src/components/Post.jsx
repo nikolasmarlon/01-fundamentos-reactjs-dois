@@ -35,6 +35,11 @@ export function Post({author, content, publishedAt}){
         //event.target.comment.value
     }
 
+    //aplicado no método onInvalid de input e textarea(que é acionado sempre que um texto(ou campo) for inválido)
+    function handleNewCommentInvalid() {
+        event.target.setCustomValidity("Este Campo é obrigatório!")
+    }
+
     
     //deletar comentário
     function deleteComment(commentToDelete){
@@ -55,8 +60,14 @@ export function Post({author, content, publishedAt}){
 
 
     function handleNewCommentChange(){
+
+        //depois que o usuário começar a digitar temos que limpar o setCustomValidity
+        event.target.setCustomValidity('')
         setNewCommentText(event.target.value)
     }
+
+    const isNewCommentEmpty = newCommentText.length == 0
+
     return(
         <article className={styles.post}>
             {/** Cabeçalho onde vai ficar o Avatar, cargo e a data de publicação */}
@@ -95,10 +106,17 @@ export function Post({author, content, publishedAt}){
                 {/** onChange monitorar toda vez tiver uma mudança no conteúdo da textarea vai 
                  * chamar uma função (handleNewCommentChange)
                  */}
-                <textarea name='comment' onChange={handleNewCommentChange} value={newCommentText} placeholder='Deixe um comentário' />
-
+                <textarea 
+                    required 
+                    name='comment' 
+                    onChange={handleNewCommentChange} 
+                    value={newCommentText} 
+                    placeholder='Deixe um comentário' 
+                    onInvalid={handleNewCommentInvalid}
+                />
+                    
                 <footer>
-                    <button type='submit'>Publicar</button>
+                    <button disabled={isNewCommentEmpty} type='submit'>Publicar</button>
                 </footer>
             </form>
             {/**Fim Seção formulário de comentários */}
