@@ -1,4 +1,5 @@
 import { ThumbsUp, Trash } from 'phosphor-react'
+import { useState } from 'react'
 import { Avatar } from './Avatar'
 import styles from './Comment.module.css'
 
@@ -6,6 +7,14 @@ import styles from './Comment.module.css'
 
 
 export function Comment({content, onDeleteComment}){
+
+    //aplaudir
+    //sempre importante iniciar o estado com uma informação que seja do mesmo tipo que iremos armazenar
+    const [likeCount, setLikeCount] = useState (0)
+
+    function handleLikeComment(){
+        setLikeCount(likeCount + 1)
+    }
 
 
     //deletar comentário 
@@ -39,10 +48,11 @@ export function Comment({content, onDeleteComment}){
                 </div>
 
                 <footer>
-                    <button>
+                    {/**quando o usuário clicar em aplaudir */}
+                    <button onClick={handleLikeComment}>
                         {/**Biblioteca phosphor-react */}
                         <ThumbsUp />
-                        Aplaudir <span>20</span>
+                        Aplaudir <span>{likeCount}</span>
                     </button>
                 </footer>
 
