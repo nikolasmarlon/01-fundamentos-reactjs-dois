@@ -37,8 +37,19 @@ export function Post({author, content, publishedAt}){
 
     
     //deletar comentário
-    function deleteComment(comment){
-        console.log(`Deletar comentário: ${comment}`)
+    function deleteComment(commentToDelete){
+
+        //Imutabilidade -> as variáveis nao sofrem mutação
+        // o valor da variável na memória não se altera
+        // é criado um novo espaço em memória
+        //Para deletar, temos que criar uma nova lista sem o comentario que queremos deletar
+
+        const commentsWithoutDeleteOne = comments.filter(comment =>{
+            return comment != commentToDelete
+        })
+
+
+        setComments(commentsWithoutDeleteOne)
     }
 
 
@@ -98,8 +109,8 @@ export function Post({author, content, publishedAt}){
                 {comments.map(comment => {
                     return (
                         <Comment 
-                            key={comment} c
-                            ontent={comment} 
+                            key={comment} 
+                            content={comment} 
                             onDeleteComment={deleteComment} 
                         />
                     )
