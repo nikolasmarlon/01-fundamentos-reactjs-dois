@@ -34,13 +34,10 @@ export function Post({author, content, publishedAt}){
         //usado para limpar a textarea, porém nao é eficiente e usa programação imperativa
         //event.target.comment.value
     }
-
     //aplicado no método onInvalid de input e textarea(que é acionado sempre que um texto(ou campo) for inválido)
     function handleNewCommentInvalid() {
         event.target.setCustomValidity("Este Campo é obrigatório!")
-    }
-
-    
+    }    
     //deletar comentário
     function deleteComment(commentToDelete){
 
@@ -53,11 +50,8 @@ export function Post({author, content, publishedAt}){
             return comment != commentToDelete
         })
 
-
         setComments(commentsWithoutDeleteOne)
     }
-
-
 
     function handleNewCommentChange(){
 
@@ -94,14 +88,12 @@ export function Post({author, content, publishedAt}){
                     } else if (line.type == 'link'){
                         return <p key={line.content}><a href="#">{line.content}</a></p>
                     }
-                })} 
-                
+                })}                                 
             </div>
 
             {/**Seção formuário de comentários */}
             <form onSubmit={handleCreateNewComment} className={styles.commentForm}>
                 <strong>Deixe seu feedback</strong>
-
 
                 {/** onChange monitorar toda vez tiver uma mudança no conteúdo da textarea vai 
                  * chamar uma função (handleNewCommentChange)
@@ -113,8 +105,7 @@ export function Post({author, content, publishedAt}){
                     value={newCommentText} 
                     placeholder='Deixe um comentário' 
                     onInvalid={handleNewCommentInvalid}
-                />
-                    
+                />                    
                 <footer>
                     <button disabled={isNewCommentEmpty} type='submit'>Publicar</button>
                 </footer>
@@ -122,8 +113,7 @@ export function Post({author, content, publishedAt}){
             {/**Fim Seção formulário de comentários */}
 
             {/**Lista de comentários */}
-            <div className={styles.commentList}>
-                
+            <div className={styles.commentList}>                
                 {comments.map(comment => {
                     return (
                         <Comment 
@@ -132,8 +122,7 @@ export function Post({author, content, publishedAt}){
                             onDeleteComment={deleteComment} 
                         />
                     )
-                })}
-               
+                })}               
             </div>
             {/**Fim Lista de comentários */}
 
