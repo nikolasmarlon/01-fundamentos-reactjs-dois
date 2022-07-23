@@ -13,7 +13,12 @@ export function Comment({content, onDeleteComment}){
     const [likeCount, setLikeCount] = useState (0)
 
     function handleLikeComment(){
-        setLikeCount(likeCount + 1)
+        //setLikeCount(likeCount + 1)
+
+        //pega o estado mais atual para poder mudar o valor
+        setLikeCount((state) =>{
+            return state + 1
+        })
     }
 
 
